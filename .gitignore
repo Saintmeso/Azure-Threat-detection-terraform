@@ -1,0 +1,51 @@
+
+# Terraform working directory
+.terraform/
+
+# Terraform state and backups
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Local Terraform overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+
+# Private keys and certificates
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Azure credentials
+credentials.json
+azureProfile.json
+
+# Operating system files
+.DS_Store
+Thumbs.db

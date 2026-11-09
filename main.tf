@@ -66,6 +66,7 @@ resource "azurerm_public_ip" "public_ip" {
 
 resource "azurerm_windows_virtual_machine" "Cloud_VM" {
   name                  = "Cloud_VM"
+  computer_name         = "Cloud-VM"
   resource_group_name   = azurerm_resource_group.yousif_soc_lab.name
   location              = azurerm_resource_group.yousif_soc_lab.location
   size                  = "Standard_D2s_v7"
@@ -84,5 +85,10 @@ resource "azurerm_windows_virtual_machine" "Cloud_VM" {
     sku       = "win11-26h2-pro"
     version   = "26300.9725.261024"
   }
+
+  identity {
+    type = "SystemAssigned"
+  }
 }
+
 
